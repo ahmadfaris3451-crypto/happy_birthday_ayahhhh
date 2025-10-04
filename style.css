@@ -1,0 +1,155 @@
+/* Base styling */
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  background:#001f3f; /* Navy blue */
+  color: white;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Lock screen & main container */
+#lockScreen,
+#mainContent {
+  width: 100%;
+  max-width: 450px;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* Lock screen design */
+.lock-screen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.profile-img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 20px;
+  border: 3px solid white;
+}
+
+.lock-screen input {
+  padding: 10px;
+  font-size: 16px;
+  width: 150px;
+  text-align: center;
+  margin-top: 10px;
+  border-radius: 5px;
+  border: none;
+}
+
+button {
+  padding: 10px 20px;
+  margin-left: 10px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 5px;
+  background: #0077cc;
+  color: white;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+}
+
+button:hover {
+  background: #005fa3;
+  transform: scale(1.05);
+}
+
+.error {
+  color: red;
+  margin-top: 10px;
+}
+
+.hidden {
+  display: none;
+}
+
+/* Birthday Box */
+.birthday-box {
+  background: rgba(0, 0, 0, 0.65); /* Kotak hitam semi transparent */
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
+  margin: auto;
+  width: 100%;
+  box-sizing: border-box;
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+/* Menu (cards) */
+.menu {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin: 18px 0;
+}
+
+.card {
+  background: #2a2a2a;
+  padding: 8.5px;
+  border-radius: 10px;
+  cursor: pointer;
+  flex: 1 1 100px;
+  transition: transform 0.2s, background 0.3s;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  background: #444;
+}
+
+/* Section (Memory, Surprise, Message) */
+.section {
+  margin-top: 20px;
+  padding: 10px;
+}
+
+/* Slideshow images */
+.slideshow img {
+  width: 90%;
+  max-width: 300px;
+  margin: 10px 0;
+  border-radius: 10px;
+}
+
+/* Responsive untuk phone */
+@media (max-width: 600px) {
+  body {
+    justify-content: center;   /* tengah kiri kanan */
+    align-items: center;       /* tengah atas bawah */
+    padding: 0;                /* buang gap atas */
+  }
+  .menu {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .card {
+    width: 95%;
+  }
+  .birthday-box {
+    margin: auto ;
+  }
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy Birthday Ayah</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Password Screen -->
+  <div class="lock-screen" id="lockScreen">
+    <img src="img/faris4.jpg" alt="Ayah" class="profile-img">
+    <h2>🎁 Birthday Gift</h2>
+    <p>Masukkan Password</p>
+    <input type="password" id="password" maxlength="4" placeholder="****">
+    <button onclick="checkPassword()">Enter</button>
+    <p id="errorMsg" class="error"></p>
+  </div>
+
+  <!-- Main Content -->
+  <div class="main-content hidden" id="mainContent">
+    <div class="birthday-box">
+      <h1>Happy Birthday Ayah ❤️</h1>
+      <div class="menu">
+        <div class="card" onclick="showSection('memory')">📸 Memory</div>
+        <div class="card" onclick="showSection('message')">💌 Message</div>
+        <div class="card" onclick="showSection('surprise')">🎉 Surprise</div>
+      </div>
+
+      <!-- Sections -->
+      <div id="memory" class="section hidden">
+        <h2>Kenangan Indah</h2>
+        <div class="slideshow">
+          <img src="img/faris1.jpg" alt="memory 1">
+          <img src="img/faris2.jpg" alt="memory 2">
+          <img src="img/faris3.jpg" alt="memory 3">
+        </div>
+      </div>
+
+      <div id="message" class="section hidden">
+        <h2>Ucapan Ikhlas</h2>
+        <p>Assalamualaikum Ayah,
+
+Selamat hari lahir ayah tercinta. Abang doakan ayah sentiasa sihat, panjang umur, murah rezeki dan sentiasa dalam rahmat Allah. Terima kasih ayah atas segala pengorbanan, kasih sayang dan usaha ayah membesarkan kami.
+
+Abang mungkin tak selalu tunjuk, tapi dalam hati abang sangat hargai setiap titik peluh dan doa ayah untuk keluarga. Abang sayang ayah.
+
+— Abang(sorry lambat)</p>
+      </div>
+
+     <div id="surprise" class="section hidden">
+  <h2>Surprise!</h2>
+  <p>🎊 Klik play untuk tengok video ini 🎊</p>
+  <video width="100%" controls>
+    <source src="img/faris5.mp4" type="video/mp4">
+    Browser anda tidak menyokong video.
+  </video>
+  <p style="margin-top:15px; font-weight:bold; font-size:18px;">💖Agar silaturahmi tidak terputus 
+    Pinjam dulu SERATUS💖</p>
+  <img src="img/faris6.jpg" alt="Hadiah Tambahan" style="margin-top:10px; max-width:100%; border-radius:10px;">
+</div>
+
+
+  <script src="script.js"></script>
+</body>
+</html>
